@@ -1,0 +1,32 @@
+// build.gradle
+plugins {
+    id 'java'  // Enables Java compilation
+}
+
+// JDK version compatibility
+sourceCompatibility = '21'  // Matches your OpenJDK 21
+targetCompatibility = '21'
+
+// Source directory setup (if non-standard)
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']  // Points to your src/ folder
+        }
+    }
+}
+
+// Dependencies (add libraries like JUnit here)
+repositories {
+    mavenCentral()  // Downloads dependencies from Maven
+}
+
+dependencies {
+    // Example: Add JUnit Jupiter for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+}
+
+// Test configuration (optional)
+test {
+    useJUnitPlatform()
+}
