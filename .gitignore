@@ -1,4 +1,3 @@
 bin/
 build/
-src/myapp/make.sh
-src/myapp/userData/*
+USERS/

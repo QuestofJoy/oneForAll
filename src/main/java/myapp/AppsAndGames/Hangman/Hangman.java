@@ -50,13 +50,12 @@ public class Hangman implements AppsAndGamesInterface {
       // checking if the userWord has the char input given by the user
       boolean charFound = inputChecker(userWord, userWordLength, userInputChar);
 
-      // why the fuck is this if statement not working????
-      // i tried equals i tried maches
-      // left to try shits: string builder,
-      if (new String(blanks).equalsIgnoreCase(userWord)) {
+      // checks is the word was found or not
+      if (wordChecker(userWord, userWordLength)) {
         System.out.println("Congratulations!! You have found the word!!!");
         wordFound = true;
       }
+      //
 
       TUIUtils.clearScreen();
       System.out.println(new String(blanks));
@@ -114,6 +113,15 @@ public class Hangman implements AppsAndGamesInterface {
       }
     }
     return found;
+  }
+
+  private boolean wordChecker(String userWord, int userWordLength) {
+    for (int i = 0; i < userWordLength; i++) {
+      if (blanks[i] != userWord.charAt(i)) {
+        return false;
+      }
+    }
+    return true;
   }
 
   @Override

@@ -44,6 +44,7 @@ public class LoginAndRegister {
 
     System.out.println("Log-In");
     takeUserNameAndPassword(scan, 1);
+    TUIUtils.clearScreen();
     if (checkCredentialMatch()) {
       saveUserLogin();
       loadUserDataManually();
@@ -176,10 +177,10 @@ public class LoginAndRegister {
       return false;
     }
 
+    System.out.println("Loading User Data...");
     // will add user data after creating game
     // current plan is the user data will have achivements and stats saved
-    System.out.println("Loading User Data...");
-    System.out.println("Logged in successfully!!");
+    System.out.println("User data loaded successfully");
     return true;
   }
 
@@ -204,6 +205,7 @@ public class LoginAndRegister {
       }
     }
 
+    System.out.println("NOTE: Your password will be visible on screen! \nSorry :3");
     if (choice == 2) {
       System.out.print("Password: ");
       this.userPassword = BCrypt.hashpw(scan.nextLine(), BCrypt.gensalt());
