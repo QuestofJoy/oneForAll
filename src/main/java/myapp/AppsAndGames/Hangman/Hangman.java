@@ -23,7 +23,7 @@ public class Hangman implements AppsAndGamesInterface {
   }
 
   private void runGame(Scanner scan) {
-    TUIUtils.clearScreen(1000);
+    TUIUtils.clearScreen(500);
     int tries = 5;
 
     // generating random number
@@ -126,7 +126,7 @@ public class Hangman implements AppsAndGamesInterface {
 
   @Override
   public void start() {
-    System.out.println("Starting Hangman");
+    System.out.println("Starting Hangman....");
   }
 
 }

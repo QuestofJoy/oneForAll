@@ -164,7 +164,11 @@ public class LoginAndRegister {
       System.out.println("Credentials matches!!!");
       matches = true;
     } else {
-      System.out.println("Credentials does not match!");
+      System.out.println("""
+          '(＞人＜;)  Yamete!!
+          Stop right there, senpai!!!
+          Credentials does not match!!!""");
+
     }
     return matches;
   }
