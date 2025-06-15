@@ -52,18 +52,15 @@ public class Hangman implements AppsAndGamesInterface {
 
       // checks is the word was found or not
       if (wordChecker(userWord, userWordLength)) {
-        System.out.println("Congratulations!! You have found the word!!!");
         wordFound = true;
       }
       //
 
       TUIUtils.clearScreen();
-      System.out.println(new String(blanks));
-      System.out.println(userWord);
       if (charFound) {
-        System.out.println("Guess Correct!! UwU\n");
+        System.out.println("Guess Correct!! UwU");
       } else {
-        System.out.println("Guess Incorrect!!! TuT\n");
+        System.out.println("Guess Incorrect!!! TuT");
         tries--;
       }
 
@@ -71,7 +68,26 @@ public class Hangman implements AppsAndGamesInterface {
 
     }
     if (tries == 0) {
-      System.out.println("get shitted on looser");
+      System.out.println("""
+          get shitted on looser
+              ⠀⠀⠀⠀⠀⣀⣠⣤⣤⣤⣤⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          ⠀⠀⠀⠀⠀⠀⣀⣶⠿⠛⠋⠉⠀⠀⠀⠀⠀⠈⠉⠙⠻⢷⣦⣀⠀⠀⠀⠀⠀⠀
+          ⠀⠀⠀⠀⣠⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢷⣤⡀⠀⠀⠀
+          ⠀⠀⢀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣆⠀⠀
+          ⠀⢀⡾⠃⠀⠀⠀⠀⣀⡄⠀⢇⣧⢰⣄⣠⣤⣶⣶⠿⠛⠀⠀⠀⠀⠀⠀⢻⣧⠀
+          ⠀⣾⠃⠠⣤⣤⣴⡶⠿⠋⠀⣈⡁⠀⠉⠉⣀⣠⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⢿⡆
+          ⢸⡏⠀⠀⠀⢀⣀⣀⣤⣐⠈⠀⠀⢀⣴⠟⠉⠀⣴⣿⣿⣿⡿⠀⠀⠀⠀⠀⢸⣷
+          ⣼⠇⠀⣰⠞⠉⠉⣴⣿⣿⡇⠨⠭⢈⣳⠶⠛⠋⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⢸⡿
+          ⣿⠀⠀⠿⠖⠛⠛⠛⠛⠉⠤⠁⠠⠄⠒⡊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡇
+          ⢿⡄⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠈⠲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠀
+          ⢸⣧⠀⠀⠀⠀⠀⠀⠀⢸⣀⣠⣴⠶⠮⠭⠵⠞⠳⡄⠀⠀⠀⠀⠀⠀⣰⡟⠀⠀
+          ⠀⠹⣧⡀⠀⠀⠀⠀⠀⡏⠛⠉⠀⢢⡠⣄⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⠏⠀⠀⠀
+          ⠀⠀⠙⢷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠳⠞⠀⠀⠀⠀⠀⠀⣠⣶⠟⠁⠀⠀⠀⠀
+          ⠀⠀⠀⠀⠉⠛⠷⣦⣄⣀⣀⡀⠀⠀⠀⠀⠀⣀⣀⣤⡶⠟⠋⠀⠀⠀⠀⠀⠀⠀
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠛⠛⠟⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""");
+
+    } else {
+      System.out.println("\nwell played gg *claps slowly*\nthis shit was easy anyway!!\n");
     }
   }
 

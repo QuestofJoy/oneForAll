@@ -45,7 +45,7 @@ public class LoginAndRegister {
         System.out.println("User created successfully!");
         saveUserLogin();
       } else {
-        System.out.println("Use was not  created");
+        System.out.println("User was not created");
         return loggedIn;
       }
       TUIUtils.clearScreen();
