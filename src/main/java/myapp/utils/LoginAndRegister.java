@@ -1,6 +1,5 @@
 package myapp.utils;
 
-import myapp.utils.TUIUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -15,7 +14,17 @@ import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginAndRegister {
   // define ALL USER dir
-  private final String DIR_MAIN = Paths.get("").toAbsolutePath().toString() + File.separator + "USERS";
+  private final String DIR_USERS = Paths.get("").toAbsolutePath().toString() + File.separator + "USERS";
+  private final String FILE_TEMPORARY = Paths.get("").toAbsolutePath().toString() + File.separator + "tmp";
+
+  public String dirUsers() {
+    return DIR_USERS;
+  }
+
+  public String fileTemporary() {
+    return FILE_TEMPORARY;
+  }
+
   private String userName = "guest";
 
   private String userPassword = "password";
@@ -47,6 +56,7 @@ public class LoginAndRegister {
     TUIUtils.clearScreen();
     if (checkCredentialMatch()) {
       saveUserLogin();
+      currentlyLoggedInUser();
       loadUserDataManually();
       loggedIn = true;
     } else {
@@ -56,8 +66,8 @@ public class LoginAndRegister {
   }
 
   private void initilizeRequiredFolderAndFile() {
-    File USERS = new File(DIR_MAIN);
-    File lastUserName = new File(DIR_MAIN + File.separator + "lastUserName.txt");
+    File USERS = new File(DIR_USERS);
+    File lastUserName = new File(DIR_USERS + File.separator + "lastUserName.txt");
 
     // returning early if the files exists
     if (USERS.exists() && lastUserName.exists()) {
@@ -103,7 +113,7 @@ public class LoginAndRegister {
   private boolean createNewUser() {
     boolean created = false;
 
-    File newUser = new File(DIR_MAIN + File.separator + userName);
+    File newUser = new File(DIR_USERS + File.separator + userName);
     if (!newUser.mkdir()) {
       System.out.println("That username is taken. Please choose something else!");
       return created;
@@ -139,7 +149,7 @@ public class LoginAndRegister {
   }
 
   private boolean checkCredentialMatch() {
-    File user = new File(DIR_MAIN + File.separator + userName + File.separator + userName + ".txt");
+    File user = new File(DIR_USERS + File.separator + userName + File.separator + userName + ".txt");
     String line;
     boolean matches = false;
 
@@ -174,7 +184,7 @@ public class LoginAndRegister {
   }
 
   private boolean loadUserDataManually() {
-    File userData = new File(DIR_MAIN + File.separator + userName + File.separator + userName + "Data.txt");
+    File userData = new File(DIR_USERS + File.separator + userName + File.separator + userName + "Data.txt");
 
     if (!userData.exists()) {
       System.out.println("No user data found!! It might have been curropted or deleted!");
@@ -220,13 +230,26 @@ public class LoginAndRegister {
   }
 
   private void saveUserLogin() {
-    File lastUserName = new File(DIR_MAIN + File.separator + "lastUserName.txt");
+    File lastUserName = new File(DIR_USERS + File.separator + "lastUserName.txt");
 
     try (FileWriter fw = new FileWriter(lastUserName);) {
       fw.write(userName);
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+
+  private void currentlyLoggedInUser() {
+    File tmpFile = new File(FILE_TEMPORARY);
+
+    try (FileWriter fw = new FileWriter(tmpFile)) {
+      tmpFile.createNewFile();
+      tmpFile.deleteOnExit();
+      fw.write(userName);
+    } catch (IOException e) {
+
+    }
+
   }
 
   private void wrongUserInputMessege() {

@@ -75,12 +75,6 @@ public class Hangman implements AppsAndGamesInterface {
     }
   }
 
-  private void head() {
-    System.out.println("----------------------------");
-    System.out.println("        Hangman game");
-    System.out.println("----------------------------");
-  }
-
   private void initializeList() {
 
     // Add Words
@@ -127,6 +121,13 @@ public class Hangman implements AppsAndGamesInterface {
   @Override
   public void start() {
     System.out.println("Starting Hangman....");
+  }
+
+  @Override
+  public void head() {
+    System.out.println("----------------------------");
+    System.out.println("        Hangman game");
+    System.out.println("----------------------------");
   }
 
 }

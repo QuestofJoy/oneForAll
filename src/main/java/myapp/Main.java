@@ -3,6 +3,7 @@ package myapp;
 import myapp.utils.*;
 import myapp.AppsAndGames.*;
 import myapp.AppsAndGames.Hangman.Hangman;
+import myapp.AppsAndGames.ToDoList.ToDoList;
 
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class Main {
     int selection = scan.nextInt();
 
     switch (selection) {
-      case 1 -> System.out.println("under production.....");
+      case 1 -> new ToDoList(scan);
       case 2 -> new Hangman(scan);
     }
 
