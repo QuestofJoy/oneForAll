@@ -89,6 +89,7 @@ public class Hangman implements AppsAndGamesInterface {
     } else {
       System.out.println("\nwell played gg *claps slowly*\nthis shit was easy anyway!!\n");
     }
+    TUIUtils.threadSleep(1250);
   }
 
   private void initializeList() {
