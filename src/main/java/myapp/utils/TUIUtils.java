@@ -1,7 +1,5 @@
 package myapp.utils;
 
-import java.util.Scanner;
-
 public class TUIUtils {
 
   public static void clearScreen() {
@@ -9,15 +7,15 @@ public class TUIUtils {
     System.out.flush();
   }
 
-  public static void clearScreen(int seconds) {
-    threadSleep(seconds);
+  public static void clearScreen(int miliseconds) {
+    threadSleep(miliseconds);
     System.out.println("\033[H\033[2J");
     System.out.flush();
   }
 
-  public static void threadSleep(int seconds) {
+  public static void threadSleep(int miliseconds) {
     try {
-      Thread.sleep(seconds);
+      Thread.sleep(miliseconds);
     } catch (Exception e) {
       e.printStackTrace();
     }
