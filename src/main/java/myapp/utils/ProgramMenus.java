@@ -16,7 +16,12 @@ public class ProgramMenus {
     System.out.println("--------------------------------------");
     System.out.println("1. To-Do-List");
     System.out.println("2. Hangman");
-    System.out.println("3. Return to login And signup screen");
+
+    // this is a cracked log out. it does not log out just returns to the
+    // login and signup screen
+    // the newly logged in user's data will be loaded
+    // its like overriding... idk
+    System.out.println("3. Logout");
     System.out.println("4. Exit program");
     System.out.print("Enter your selection: ");
 
