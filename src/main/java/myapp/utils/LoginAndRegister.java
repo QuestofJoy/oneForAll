@@ -32,12 +32,14 @@ public class LoginAndRegister {
   public boolean loginAndRegister(Scanner scan) {
     boolean loggedIn = false;
 
-    TUIUtils.clearScreen(1500);
     initilizeRequiredFolderAndFile();
 
     int selection = loginOrSignupSelection(scan);
 
     TUIUtils.clearScreen();
+    if (selection == 0) {
+      System.exit(0);
+    }
     if (selection == 2) {
       System.out.println("Sign-Up");
       takeUserNameAndPassword(scan, 2);
@@ -93,12 +95,13 @@ public class LoginAndRegister {
   private int loginOrSignupSelection(Scanner scan) {
 
     while (true) {
+      System.out.println("(0 to exit)");
       System.out.print("Enter 1 to Log-In and 2 to Sign-Up: ");
       String userInput = scan.nextLine().trim();
 
       try {
         int choice = Integer.parseInt(userInput);
-        if (choice == 1 || choice == 2) {
+        if (choice == 0 || choice == 1 || choice == 2) {
           return choice;
         } else {
           wrongUserInputMessege();
