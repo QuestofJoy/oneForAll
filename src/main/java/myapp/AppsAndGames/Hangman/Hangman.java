@@ -87,7 +87,7 @@ public class Hangman implements AppsAndGamesInterface {
           ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠛⠛⠟⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""");
 
     } else {
-      System.out.println("\nwell played gg *claps slowly*\nthis shit was easy anyway!!\n");
+      System.out.println("well done player you found the word!!!\n(ﾉ´ヮ´)ﾉ*:･ﾟ✧");
     }
     TUIUtils.threadSleep(1250);
   }

@@ -38,11 +38,12 @@ public class ProgramMenus {
       case 1 -> new ToDoList(scan);
       case 2 -> new Hangman(scan);
       case 3 -> {
+        TUIUtils.clearScreen();
         while (!lar.loginAndRegister(scan)) {
         }
       }
       case 4 -> {
-        System.out.println("Have a nice day!!\nbyeee :)");
+        System.out.println("Have a nice day!!\nbyeee :)\n");
         ;
         runProgram = false;
       }
