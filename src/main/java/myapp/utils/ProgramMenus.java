@@ -43,8 +43,9 @@ public class ProgramMenus {
         }
       }
       case 4 -> {
-        System.out.println("Have a nice day!!\nbyeee :)\n");
-        ;
+        TUIUtils.clearScreen();
+        System.out.println("Have a nice day!!\nbyeee :)");
+        TUIUtils.clearScreen(1250);
         runProgram = false;
       }
       default -> System.out.println("under production...");
