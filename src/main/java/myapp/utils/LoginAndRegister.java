@@ -11,6 +11,7 @@ import java.io.BufferedWriter;
 import java.util.List;
 import java.util.ArrayList;
 import org.mindrot.jbcrypt.BCrypt;
+import java.io.Console;
 
 public class LoginAndRegister {
   // define ALL USER dir
@@ -222,11 +223,19 @@ public class LoginAndRegister {
       }
     }
 
+    // console
+    // Console cnsl = System.console();
+    // if (cnsl == null) {
+    // System.out.println(
+    // "No console available");
+    // }
     System.out.println("NOTE: Your password will be visible on screen! \nSorry :3");
     if (choice == 2) {
+      // cnsl.readPassword("password: ");
       System.out.print("Password: ");
       this.userPassword = BCrypt.hashpw(scan.nextLine(), BCrypt.gensalt());
     } else {
+      // cnsl.readPassword("password: ");
       System.out.print("Password: ");
       this.userPassword = scan.nextLine();
     }
