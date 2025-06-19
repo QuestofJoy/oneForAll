@@ -1,6 +1,6 @@
 bin/
 USERS/
-build/
+# build/
 run.sh
 todo
 run.sh
