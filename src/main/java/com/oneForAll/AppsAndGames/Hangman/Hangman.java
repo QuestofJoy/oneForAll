@@ -1,12 +1,12 @@
-package myapp.AppsAndGames.Hangman;
+package com.oneForAll.AppsAndGames.Hangman;
 
 import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import myapp.AppsAndGames.AppsAndGamesInterface;
-import myapp.utils.TUIUtils;
+import com.oneForAll.AppsAndGames.AppsAndGamesInterface;
+import com.oneForAll.utils.TUIUtils;
 
 public class Hangman implements AppsAndGamesInterface {
 

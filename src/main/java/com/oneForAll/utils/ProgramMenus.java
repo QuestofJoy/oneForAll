@@ -1,9 +1,9 @@
-package myapp.utils;
+package com.oneForAll.utils;
 
 import java.util.Scanner;
 
-import myapp.AppsAndGames.Hangman.Hangman;
-import myapp.AppsAndGames.ToDoList.ToDoList;
+import com.oneForAll.AppsAndGames.ToDoList.*;
+import com.oneForAll.AppsAndGames.Hangman.*;
 
 public class ProgramMenus {
 

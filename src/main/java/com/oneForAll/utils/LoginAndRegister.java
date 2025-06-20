@@ -1,4 +1,4 @@
-package myapp.utils;
+package com.oneForAll.utils;
 
 import java.io.File;
 import java.io.IOException;

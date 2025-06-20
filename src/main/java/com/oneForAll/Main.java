@@ -1,6 +1,6 @@
-package myapp;
+package com.oneForAll;
 
-import myapp.utils.*;
+import com.oneForAll.utils.*;
 import java.util.Scanner;
 
 public class Main {
