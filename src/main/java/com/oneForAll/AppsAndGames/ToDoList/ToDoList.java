@@ -1,4 +1,4 @@
-package myapp.AppsAndGames.ToDoList;
+package com.oneForAll.AppsAndGames.ToDoList;
 
 import myapp.AppsAndGames.AppsAndGamesInterface;
 import myapp.utils.*;
@@ -81,7 +81,7 @@ public class ToDoList implements AppsAndGamesInterface {
     if (!userFile.exists()) {
       try {
         userFile.createNewFile();
-        System.out.println(userName + " to-do-list created");
+        System.out.println(userName + "\'s to-do-list created");
       } catch (IOException e) {
         e.printStackTrace();
       }
