@@ -74,7 +74,7 @@ set CLASSPATH=%APP_HOME%\lib\oneForAll.jar;%APP_HOME%\lib\jbcrypt-0.4.jar
 
 
 @rem Execute oneForAll
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %ONE_FOR_ALL_OPTS%  -classpath "%CLASSPATH%" myapp.Main %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %ONE_FOR_ALL_OPTS%  -classpath "%CLASSPATH%" com.oneForAll.Main %*
 
 :end
 @rem End local scope for the variables with windows NT shell

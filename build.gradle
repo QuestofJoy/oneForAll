@@ -6,7 +6,7 @@ plugins {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'myapp.Main'
+        attributes 'Main-Class': 'com.oneForAll.Main'
     }
     from {
         configurations.runtimeClasspath.collect { 
@@ -47,5 +47,5 @@ test {
 }
 
 application {
-    mainClass = 'myapp.Main'
+    mainClass = 'com.oneForAll.Main'
   }

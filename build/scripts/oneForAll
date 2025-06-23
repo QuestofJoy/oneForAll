@@ -212,7 +212,7 @@ DEFAULT_JVM_OPTS=""
 
 set -- \
         -classpath "$CLASSPATH" \
-        myapp.Main \
+        com.oneForAll.Main \
         "$@"
 
 # Stop when "xargs" is not available.
