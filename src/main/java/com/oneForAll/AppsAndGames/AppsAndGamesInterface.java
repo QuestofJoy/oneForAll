@@ -1,4 +1,4 @@
-package myapp.AppsAndGames;
+package com.oneForAll.AppsAndGames;
 
 public interface AppsAndGamesInterface {
   void start();

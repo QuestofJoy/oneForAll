@@ -1,7 +1,7 @@
 package com.oneForAll.AppsAndGames.ToDoList;
 
-import myapp.AppsAndGames.AppsAndGamesInterface;
-import myapp.utils.*;
+import com.oneForAll.AppsAndGames.AppsAndGamesInterface;
+import com.oneForAll.utils.*;
 
 import java.util.Scanner;
 import java.util.List;
