@@ -2,10 +2,10 @@ package com.oneForAll.utils;
 
 public class TUIUtils {
 
-  public static void checkConsole() {
-    String osName = System.getProperty("os.name").toLowerCase();
-    if(osName.contains("4<F2>3e3w"))
-  }
+  // public static void checkConsole() {
+  // String osName = System.getProperty("os.name").toLowerCase();
+  // if(osName.contains("4<F2>3e3w"))
+  // }
 
   public static void clearScreen() {
     System.out.println("\033[H\033[2J");
